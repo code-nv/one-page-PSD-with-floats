@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>project-1</title>
+
+<link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Great+Vibes&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/8ffef1b7fa.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header id="home">
+        <a href="#about" class="skip-to-main visually-hidden primary-link"> skip to main content</a>
+        <div class="wrapper-large">
+            <nav class="header-nav clearfix">
+                <h2>tasty</h2>
+                <label for="burger" class="sr-only">toggle button for navigation menu</label>
+                <input type="checkbox" name="burger" id="burger" class="burger-button">
+                <ul class="clearfix mobile-nav">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#blog">blog</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <li>
+                        <ul class="mobile-social">
+                            <li><a href="#home"><i class="fab fa-facebook-f" title="go to our facebook" aria-hidden="true"></i>
+                                <span class="sr-only">link to our facebook</span>
+                            </a></li>
+                            <li><a href="#home"><i class="fab fa-instagram" title="go to our instagram" aria-hidden="true"></i>
+                                <span class="sr-only">link to our instagram</span>
+                            </a></li>
+                            <li><a href="#home"><i class="fab fa-linkedin-in" title="go to our linkedin" aria-hidden="true"></i>
+                                <span class="sr-only">link to our linkedin</span>
+                            </a></li>
+                            <li><a href="#home"><i class="fab fa-twitter" title="go to our twitter" aria-hidden="true"></i>
+                                <span class="sr-only">link to our twitter</span>
+                            </a></li>
+                        </ul>
+                        </li>
+                </ul>
+            </nav>
+            <div class="title-container">
+                <p>welcome to</p>
+                <h1>tasty<span>...</span></h1>
+            </div>
+            <!-- make this a section later -->
+        </div> <!--end of wrapper-->
+    </header>
+    <section class="social-media">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook-f" title="go to our facebook" aria-hidden="true"></i>
+                    <span class="sr-only">link to our facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram" title="instagram" aria-hidden="true"></i>
+                    <span class="sr-only">link to our instagram</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-linkedin-in" title="go to our linkedin" aria-hidden="true"></i>
+                    <span class="sr-only">link to our linkedin</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-twitter" title="go to our twitter" aria-hidden="true"></i>
+                    <span class="sr-only">link to our twitter</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+    <main>
+        <section class="about" id="about">
+            <div class="wrapper-small">
+                <h2>about tasty</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus autem deserunt ut? Cumque, quia odio tempore ullam dolorum molestiae eos atque. Aliquam rerum animi eum, ipsum et dignissimos itaque numquam? Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#about" class="primary-link">find out more</a>
+            </div>
+        </section>
+
+        <section class="blog clearfix" id="blog">
+            <!-- wrapper? maybe? idk -->
+            <nav class="blog-nav">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#recipes" class="blog-link">
+                        <i class="fas fa-utensils"></i>
+                        <span>recipes</span>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#cooking-tips" class="blog-link">
+                        <i class="fas fa-book-open"></i>
+                        <span>cooking tips</span></a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="blog-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact</span></a>
+                    </li>
+                </ul>
+            </nav>
+                    <ul class="gallery">
+                <div class="gallery-parent wrapper-large clearfix">
+                    <div class="gallery-container">
+                        <img src="./tasty-assets/asset-2.jpg" alt="lemon wedges on blueberries">
+                    </div>
+                    <div class="gallery-container">
+                        <img src="./tasty-assets/asset-3.jpg" alt="dish of chicken and spinach with a lemon slice and dressing on the side">
+                    </div>
+                    <div class="gallery-container">
+                        <img src="./tasty-assets/asset-4.jpg" alt="zesty citrus soup on blue placemates">
+                    </div>
+                </ul>
+                </div>
+
+            <article class="blog-post post-1 post clearfix" id="cooking-tips">
+                <div class="post-1-text-container">
+                    <h3>cooking tips</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem cupiditate quae quaerat non ducimus a repudiandae perferendis unde ab?</p>
+                    <a href="#cooking-tips" class="primary-link">read more</a>
+                </div>
+                <div class="post-1-image">
+                    <img class="" src="./tasty-assets/asset-5.jpg" alt="plate of mandarins, kiwi and apples cut in halves beside a tablet with our blog open">
+                </div>
+            </article>
+
+            <article class="blog-post post-2 post clearfix" id="recipes">
+                <div class="post-2-text-container">
+                    <h3>popular recipes</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem cupiditate quae quaerat non ducimus a repudiandae perferendis unde ab?</p>
+                    <a href="#recipes" class="primary-link">read more</a>
+                </div>
+                <div class="post-2-image">
+                    <img class="" src="./tasty-assets/asset-6.jpg" alt="countertop organizer with measuring cups, wooden spoons and a tablet holder with recipe card open">
+                </div>
+            </article>
+        </section>
+
+        <section class="meet-the-cook" id="meet-the-cook">
+            <div class="wrapper-large clearfix">
+                <div class="chef-photo-container">
+                    <img class="chef-photo" src="./tasty-assets/asset-7.jpg" alt="headshot of our chef framed with many citrus slices">
+                </div>
+                <div class="meet-the-cook-text-container">
+                    <h2>meet <span>the</span> cook</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam totam autem exercitationem quas sapiente, non blanditiis facere ea quos animi labore aperiam accusamus, asperiores doloremque, ipsam corrupti cupiditate iure. Nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa nobis, nisi blanditiis enim doloremque est tempore ratione, quas ipsa voluptas magnam expedita quia exercitationem. Numquam sunt molestias fugiat impedit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum veritatis tempore quibusdam provident hic, labore ducimus eligendi vel accusamus fugiat architecto laborum accusantium fugit nobis itaque voluptatibus et in officia.
+                    </p>
+                    <a href="#meet-the-cook" class="primary-link">find out more</a>
+                </div>
+            </div> <!-- end of wrapper-large -->
+        </section>
+    </main>
+
+    <footer class="contact" id="contact">
+        <div class="wrapper-large clearfix">
+
+            <div class="form-container">
+                <h4>stay updated</h4>
+                <form action="#" name="subscribe" class="clearfix">
+                    <label for="e-mail">
+                    Subscribe to our newsletter to stay updated.
+                    </label>
+                    <input type="email" value="email address">
+                    <button type="submit">subscribe</button>
+                </form>
+            </div> <!--end form container-->
+
+            <ul class=" contact-container clearfix">
+                <li class=" contact-columns contact-links">
+                    <h4>contact</h4>
+                    <ul class="clearfix">
+                        <li class="contact-email">info@email.com</li>
+                        <li>123 - 456 - 7890</li>
+                        <li>123 some road.</li>
+                        <li>Toronto. ON</li>
+                    </ul>
+                </li>
+                <li class=" contact-columns nav-links">
+                    <h4>pages</h4>
+                    <ul class="clearfix">
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#blog">blog</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </li>
+                <li class=" contact-columns">
+                    <h4>recent posts</h4>
+                    <ul>
+                        <li><a href="#contact">lemon pound cake</a></li>
+                        <li><a href="#contact">spaghetti squash</a></li>
+                        <li><a href="#contact">sugar free</a></li>
+                        <li><a href="#contact">lemonade</a></li>
+                    </ul>
+                </li>
+            </ul> <!-- end contact-container -->
+        </div> <!-- end of wrapper -->
+        <div class="copy">
+            <p>copyright &copy 2020 nick reyno </p>
+        </div>
+    </footer>
+</body>
+</html>

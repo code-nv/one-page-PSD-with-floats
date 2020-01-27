@@ -1,0 +1,968 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+.visually-hidden:not(:focus):not(:active) { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+.skip-to-main {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+/* General/Stripping */
+html {
+    font-size: 62.5%;
+    color: #000;
+    background: #EAEDF4;
+}
+
+main,
+section,
+header {
+    width: 100vw;
+}
+
+h1,
+h2,
+ul,
+li {
+    margin:0;
+    padding:0;
+}
+
+img {
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+li {
+    list-style: none;
+    list-style-position: inside;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center; 
+    color:inherit;
+}
+
+/* wrapper styles */
+.wrapper-large {
+    max-width: 1080px;
+    width: 87vw;
+    margin: 0 auto;
+}
+
+.wrapper-small {
+    max-width: 800px;
+    width: 50vw;
+    margin: 0 auto;
+}
+
+/* headings & font styles */
+h1 {
+    font-family: Great Vibes, cursive;
+    text-transform: capitalize;
+    font-weight: lighter;
+    width:100%;
+    text-align: center;
+    font-size: calc(6rem + 5vw);
+    line-height: 0.7;
+    word-spacing: -3px;
+}
+
+h2 {
+    font-family: Great Vibes, cursive;
+    font-weight: normal;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 1.5rem 2rem 2rem 2.5rem;
+}
+
+h3 {
+    font-family:Cabin, sans-serif;
+    text-transform: uppercase;
+    font-size: calc(0.5rem + 1.5vw);
+}
+
+p,
+.contact-columns li,
+label {
+    font-family:Cabin, sans-serif;
+    font-weight:Regular;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+
+/* header styles */
+header {
+    position: relative;
+    height: 100vh;
+    background: url(./tasty-assets/asset-1.jpg) fixed;
+    background-size: cover;
+    background-position-x: 55%;
+}
+
+/* need to specify height because position sticky nav would stop at the lowest text content, not the bottom of header */
+header .wrapper-large {
+    height: 100vh;
+}
+
+/* Nav Styles */
+.header-nav {
+    position: sticky;
+    width:100%;
+    top: 0;
+    font-family: Cabin, sans-serif;
+    text-transform: uppercase;
+}
+
+nav h2 {
+    float: left;
+    font-family: Great Vibes, cursive;
+    font-weight: normal;
+    font-size: 4.2rem;
+    text-transform: capitalize;
+}
+
+/* be seein you later */
+.burger-button {
+    display: none;
+}
+
+nav li:hover,
+nav li:focus-within,
+nav li:active {
+    color: #FDC800;
+    text-shadow: 0 0 1.5px black;
+}
+
+header ul,
+.blog-nav ul,
+h4 { 
+    font-family:Cabin, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: calc(1.2rem + 0.5vw);
+    margin: 30px 0;
+}
+
+.header-nav ul {
+    float:right;
+    width:36%;
+    font-size: calc(1rem + 0.5vw); /*overriding font-size from previous declaration */
+}
+
+.header-nav li {
+    float:left; 
+    width:auto;
+    padding-left: 8.5%;
+}
+
+.mobile-social {
+    display:none;
+}
+
+/* this was the best way I could find to center the title in the header */
+.title-container {
+    position: absolute;
+    top:34%;
+    left:50%;
+    transform: translate(-50%, 0);
+}
+
+/* made to fiddle with the tasty dots */
+h1 span {
+    position: relative;
+    right: 7px;
+    letter-spacing: -5px;
+}
+
+header p {
+    font-family: Cabin, sans-serif;
+    font-size: calc(1.5rem + 0.8vw);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    width:100%;
+}
+
+/* social media */
+.social-media {
+    position: fixed;
+    margin:0;
+    width: auto;
+    top: 50%;
+    right: 4.5vw;
+    transform: translateY(-50%);
+    text-align: right;
+    color: #FDC800;
+    text-shadow: 1px 1px #56565655; /* added to help with contrast in header */
+    font-size: 1.6rem;
+}
+
+.social-media li {
+    margin: 5px 0;
+    padding: 5px 5px;
+}
+
+.social-media li:hover,
+.social-media li:focus-within,
+.social-media li:active {
+    color:#515050;
+    text-shadow: 1px 1px #FDC800AA;
+}
+
+/* link base styles */
+.primary-link {
+    display: block; /* needed vs inline-block for positioning quirks */
+    background: #FDC800;
+    width:170px;
+    margin: 15px auto;
+    padding: 1.2rem 2rem;
+    font-family: cabin, sans-serif;
+    font-weight:bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+/* that sweet sweet hover state for my link lads */
+.primary-link:hover,
+.primary-link:focus,
+.primary-link:active,
+.blog-nav li:hover,
+.blog-nav li:focus,
+.blog-nav li:active,
+.contact-columns li:hover a,
+.contact-columns li:focus a
+.contact-columns a:active {
+    background-color: #232323;
+    color: #FDC800;
+    cursor: pointer;
+}
+
+
+/* about styles */
+.about {
+    background: #EAEDF4;
+    padding: 60px;
+}
+
+/* blog styles */
+.blog-nav {
+    background-color: #232323;
+    padding: 70px 20%;
+    font-family: cabin, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #F8F8F8;
+    text-transform: uppercase;
+}
+
+.blog-nav ul {
+    margin: 0 auto;
+    font-size: calc(0.5rem + 2vw);
+}
+
+.blog-nav li {
+    float:left;
+    padding:0;
+    width:33.33%;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.blog-nav a,
+.fas {
+    width: 100%;
+}
+
+/* blog-nav icons */
+.fas {
+    font-size: 3.4rem;
+    margin-bottom:30px;
+}
+
+/* gallery styles */
+.gallery {
+    background: #f8f8f8;
+    padding: 60px 0;
+}
+
+.gallery-container {
+    float:left;
+    width: calc(33.33% - 5%);
+    margin: 2.5%;
+}
+
+/* blog-posts */
+.blog-post {
+    background: #EAEDF4;
+    width: 100%;
+    text-align: center;
+}
+
+.post {
+    min-height: 50vh;
+    text-align:center; 
+}
+
+.post-1-image,
+.post-1-text-container {
+    float:left;
+    width:50vw;
+    min-height: 50vh;
+}
+
+.post img{
+    min-height: 50vh;
+}
+
+.post-2-image,
+.post-2-text-container {
+    float:right;
+    width:50vw;
+    min-height: 50vh;
+}
+
+/* overiding width from previous */
+.post-1-text-container,
+.post-2-text-container {
+    width: 20vw;
+    padding-top: 4vw;
+}
+
+.post-1-text-container {
+    margin: 0 10vw 0 20vw;
+}
+
+.post-2-text-container {
+    margin: 0 20vw 0 10vw;
+}
+
+.post a {
+    width: 125px;
+    margin: 0 auto;
+}
+
+
+/* meet the chef styles */
+.meet-the-cook {
+    padding: 60px 0;
+    background: #f8f8f8;
+}
+
+.chef-photo {
+    border-radius: 50%;
+}
+
+.chef-photo-container {
+    float:left;
+    width: 25%;
+    margin:0;
+}
+
+.meet-the-cook-text-container {
+    float:left;
+    width:65%;
+    margin:0 5% 0 5%;
+}
+
+.meet-the-cook p,
+.meet-the-cook h2 {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.meet-the-cook h2 span {
+    text-transform: lowercase;
+}
+
+.meet-the-cook a {
+    margin: 10px 0;
+}
+
+/* footer */
+footer {
+    background: #232323;
+    color: #F8F8F8;
+    padding-top: 60px
+}
+
+.form-container {
+    float:right;
+    width: 50%;
+}
+
+.contact-container {
+    width: 50%;
+}
+
+.contact-columns{
+    float:left;
+    width: 29%;
+    margin-right: 4.33%;
+}
+
+.contact-columns li {
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.contact h4 {
+    margin:0 0 10px 0;
+}
+
+ul .contact-columns:nth-of-type(2) {
+    text-transform: uppercase;
+}
+
+ul .contact-columns:last-child() {
+    text-transform: capitalize;
+    margin-right: 0%;
+    width: 42%;
+}
+
+/* form styles */
+label {
+    width: 100%;
+}
+
+form input {
+    float:left;
+    width: 70%;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border:0;
+    font-size: 1.6rem;
+}
+
+button {
+    float:left;
+    width: 30%;
+    padding: 10px;
+    margin: 5px 0;
+    border:none;
+    background: #FDC800;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.copy {
+    color: #6A6A6A;
+    background: #000000;
+    margin-top:60px;
+}
+
+.copy p {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 0;
+    text-transform: capitalize;
+} 
+
+
+@media (max-width: 925px) {
+    
+    .header-nav ul {
+        padding-left:30px;
+    }
+
+    .header-nav li {
+    padding-left:10px;
+    }
+}
+
+@media (max-width:864px) {
+
+    .wrapper-small {
+        width: 70vw;
+    }
+
+    .contact .wrapper-large {
+        width: 90vw;
+    }
+
+    .contact-container {
+        width: 55%;
+    }
+
+    .form-container {
+        width: 45%;
+    }
+
+    .contact-columns:nth-of-type(2){
+        width: 24%;
+    }
+
+    .contact-columns:nth-of-type(3){
+        width: 34%;
+    }
+
+    form input {
+        width: 60%;
+    }
+
+    button {
+    width: 40%;
+    }
+
+}
+
+@media (max-width: 815px) {
+
+    h1 {
+        font-size: calc(10rem + 5vw);
+    }
+    
+    .header-nav {
+        position: relative;
+    }
+
+    .header-nav ul {
+        padding-left: 0;
+        width: 50%;
+    }
+
+    .header-nav li {
+        padding-left: 10%;
+    }
+
+    .blog-nav {
+        padding: 40px 10%;
+    }
+
+    .post-1-text-container,
+    .post-2-text-container {
+        width: 34vw;
+        margin: 0;
+    }
+
+    .post-1-text-container,
+    .post-2-text-container {
+        margin: 0 8vw 0 8vw;
+        padding-top: 8vw;
+    }
+
+    .post-1-image,
+    .post-2-image,
+    .post img{
+        height: 100%;
+    }
+
+}
+
+@media( max-width:670px) {
+
+    /* headers and font styles */
+    h1 {
+        font-size: calc(10rem + 8vw);
+    }
+
+    h2 {
+        font-size: calc(3.2rem + 2.5vw);
+    }
+
+    h3 {
+        font-size: calc(2rem + 3.4vw);
+        margin-top: 0;
+    }
+
+    header p {
+        font-size: calc(2rem + 2vw);
+    }
+
+    .about p,
+    .blog-post p,
+    .meet-the-cook p {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .about .primary-link,
+    .meet-the-cook a {
+        font-size: 2rem;
+        width: 225px;
+        padding: 1.5rem 1rem; 
+    }
+
+    .post a {
+        font-size: 2rem;
+        width: 180px;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .social-media {
+        display: none;
+    }
+
+    .header-nav ul {
+        width: 100%;
+    }
+
+    .mobile-nav {
+        display:block;
+        position: fixed;
+        top:0;
+        left:100vw;
+        margin:0;
+        height: 100vh;
+        transition: all 0.4s;
+    }
+
+    .header-nav li {
+        float:none;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 5rem;
+    }
+
+    .mobile-social {
+        display: block;
+        position: absolute;
+        bottom:0;
+        left:0;
+    }
+
+    .mobile-social li {
+        display:block;
+        color:black;
+        float:left;
+        width: 25%;
+    }
+
+    .header-nav li:hover {
+        color:black;
+        text-shadow: none;
+    }
+
+    input[type=checkbox] {
+        display: block;
+        position: fixed;
+        appearance: none;
+        -moz-appearance: none;
+        background: url(./tasty-assets/bars-solid.svg);
+        top:20px;
+        right: 4vw;
+        height:35px;
+        width:30px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .burger-button:checked {
+        background: url(./tasty-assets/times-solid.svg);
+        width: 25px;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% { transform: rotate(360deg);
+    
+        }
+    }
+
+    /* couldn't find a way in pure css to force animation to finish when leaving active state */
+    /* god I miss javascript :'( */
+    .burger-button:active {
+        animation: spin 0.8s infinite;
+    }
+
+    .burger-button:checked + ul {
+        left:0;
+        background-color: #FDC800;
+        z-index: 1;
+    }
+
+
+
+    .about {
+        padding: 40px;
+    }
+
+    .wrapper-small {
+        width: 100%;
+    }
+
+    /* blog styls */
+    .blog-nav {
+        padding: 40px 5%;
+    }
+
+    /* gallery styles */
+    .gallery {
+        padding: 0;
+    }
+
+    .gallery .wrapper-large {
+        width: 100vw;
+    }
+
+    .gallery > div {
+        padding: 0;
+    }
+
+    .gallery-container {
+        float:left;
+        width: 50%;
+        margin: 0;
+    }
+
+    .gallery-container:nth-of-type(3) {
+        display:none;
+    }
+
+    /* blog post styles */
+    .post-1-image,
+    .post-1-text-container,
+    .post-2-image,
+    .post-2-text-container {
+        float: none;
+        width: 100%;
+        min-height: 0vh;
+        height: auto;
+    }
+
+    .post-1-text-container,
+    .post-2-text-container {
+        margin: 0;
+        padding: 60px;
+    }
+
+    /* meet the cook styles */
+    .chef-photo-container {
+        float:none;
+        margin:0 auto;
+        width: 50%
+    }
+
+    .meet-the-cook-text-container {
+        float:none;
+        width:100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .meet-the-cook h2,
+    .meet-the-cook a {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .meet-the-cook p {
+        padding-right: 20px;
+    }
+
+    /* footer styles */
+    .form-container {
+        float:none;
+        width:100%;
+    }
+
+    .contact-container {
+        clear:both;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .contact-columns,
+    .contact-columns:nth-of-type(2),
+    .contact-columns:nth-of-type(3) {
+        width: 33.33%;
+        margin: 0 auto;
+    }
+
+    .contact-columns li {
+        text-align: center;
+    }
+
+    .contact h4 {
+        font-size: calc(1rem + 2vw);
+        text-align: center;
+    }
+
+    form label {
+        display:inline-block;;
+    }
+
+    form input,
+    form button {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .wrapper-large,
+    .wrapper-small {
+        width: 100%;
+    }
+
+    /* .burger-button {
+        width: auto;
+        right: 3vw;
+        text-shadow: 5px 0px black;
+    } */
+
+    h1 {
+        font-size: calc(7rem + 17vw); ;
+    }
+
+    h2 {
+        font-size: calc(4.2rem + 2.5vw) ;
+    }
+
+    nav h2 {
+        font-size: 5rem;
+    }
+
+    .about h2 {
+        margin: 1.5rem 0 2rem 0;
+    }
+
+    .blog-nav {
+        padding: 60px 40px;
+    }
+
+    .blog-nav li {
+        float: none;
+        width:100%;
+        margin-bottom: 50px;
+        font-size: calc(1.7rem + 2vw);
+    }
+
+    .blog-nav li:last-child {
+        margin-bottom: 0;
+    }
+
+    .fas {
+        font-size: 4.5rem;
+        margin-bottom: 15px;
+    }
+    
+
+    .post-1-image,
+    .post-2-image,
+    .post img{
+        min-height: 20vh;
+        /* height: 20vh; */
+    }
+
+    .meet-the-cook p {
+        padding: 0 20px;
+    }
+
+
+    .contact h4 {
+        font-size: calc(2rem + 2vw);
+    }
+    
+    label {
+        font-size: calc(1rem + 2.4vw);
+    }
+
+    form input,
+    form button { 
+        float:none;
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .contact-columns:nth-of-type(3) {
+        display: none;
+    }
+
+    .contact-columns {
+        float: none;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .contact-columns li {
+        font-size: calc(1rem + 2.4vw);
+        line-height: 1.5;
+    }
+
+    .contact-links li:nth-child(odd) {
+        float: left;
+        clear: right;
+        text-align: right;
+    }
+    .contact-links li:nth-child(even) {
+        float:right;
+        text-align: left;
+    }
+
+    .contact-links li {
+        width: 49%;
+    }
+
+    .contact-email:after {
+        content: ",";
+    }
+
+    .contact-columns:nth-of-type(2) {
+        width: 100%;
+        margin: 0 auto 40px auto;
+    }
+
+    .nav-links li {
+        position: relative;
+        float:left;
+        width: 24%;
+    }
+
+    .nav-links li:after {
+        content: "|";
+        position: absolute;
+        right:0;
+    }
+
+    .nav-links li:last-child {
+        width: 28%;
+    }
+
+    .nav-links li:last-child:after {
+        content: none;
+    }
+
+    .copy {
+        padding: 10px;
+    }
+
+    .copy p {
+        font-size: calc(1rem + 2.4vw);
+        margin:0;
+    }
+}
